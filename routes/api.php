@@ -20,10 +20,6 @@ Route::name('api.')->group(function () {
         Route::apiResource('mutations', MutationController::class);
     });
 
-
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
 });
 
 // Route::middleware('auth:api')->group(function () {
