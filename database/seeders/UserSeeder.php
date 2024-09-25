@@ -19,7 +19,8 @@ class UserSeeder extends Seeder
             'email' => 'admin@gmail.com',
             'password' => Hash::make('password'),
             'phone_number' => '681234567890',
-            'address' => 'Surabaya, Jawa Timur'
+            'address' => 'Surabaya, Jawa Timur',
+            'role' => 'admin'
         ]);
     }
 }
