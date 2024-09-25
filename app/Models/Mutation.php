@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Mutation extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'user_id',
+        'item_id',
+        'date',
+        'mutation_type',
+        'amount',
+    ];
+
+    public function item(){
+        return $this->belongsTo(Item::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

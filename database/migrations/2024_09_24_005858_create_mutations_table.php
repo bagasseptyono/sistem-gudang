@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('mutations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('item_id')->constrained()->onDelete('cascade');
+            $table->date('date');
+            $table->string('mutation_type');
+            $table->integer('amount');
             $table->timestamps();
         });
     }
